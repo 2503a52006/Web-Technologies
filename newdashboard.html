@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Smart Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-protected>
+    <!-- HEADER -->
+    <div class="topbar">
+        <h1>Smart Attendance</h1>
+        <div>
+            <span id="whoami" style="margin-right:15px;color:#a8b0c8;font-size:13px;"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <a href="newdashboard.html">📊 Dashboard</a>
+            <a href="newstudent.html">👨‍🎓 Students</a>
+            <a href="newattendance.html">📝 Attendance</a>
+            <a href="newreport.html">📄 Reports</a>
+            <a href="newadmin.html" data-role="admin">⚙️ Admin</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <h1>Dashboard</h1>
+            <p class="subtitle">Welcome to the Smart Attendance System</p>
+
+            <!-- QUICK STATS -->
+            <div class="cards">
+                <div class="card"><h3>Today's Attendance</h3><p>87%</p></div>
+                <div class="card"><h3>Total Students</h3><p>900</p></div>
+                <div class="card present"><h3>Present Today</h3><p>782</p></div>
+                <div class="card absent"><h3>Absent Today</h3><p>118</p></div>
+            </div>
+
+            <!-- RECENT ATTENDANCE -->
+            <div class="admin-actions">
+                <h2>Recent Attendance Records</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Class</th>
+                            <th>Total Students</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-12-20</td>
+                            <td>Class 10 - A</td>
+                            <td>35</td>
+                            <td>33</td>
+                            <td>2</td>
+                            <td><span class="status present-status">94%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-20</td>
+                            <td>Class 10 - B</td>
+                            <td>38</td>
+                            <td>35</td>
+                            <td>3</td>
+                            <td><span class="status present-status">92%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-20</td>
+                            <td>Class 11 - A</td>
+                            <td>40</td>
+                            <td>36</td>
+                            <td>4</td>
+                            <td><span class="status late-status">90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-20</td>
+                            <td>Class 12 - A</td>
+                            <td>42</td>
+                            <td>38</td>
+                            <td>4</td>
+                            <td><span class="status present-status">90%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div class="admin-actions">
+                <h2>Quick Actions</h2>
+                <div class="admin-buttons">
+                    <button onclick="goTo('newattendance.html')">📝 Mark Attendance</button>
+                    <button onclick="goTo('newreport.html')">📊 View Reports</button>
+                    <button onclick="goTo('newstudent.html#add')">👨‍🎓 Add Student</button>
+                    <button onclick="goTo('newadmin.html')" data-role="admin">⚙️ Settings</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

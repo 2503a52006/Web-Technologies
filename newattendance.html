@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance - Smart Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-protected>
+    <!-- HEADER -->
+    <div class="topbar">
+        <h1>Smart Attendance</h1>
+        <div>
+            <span id="whoami" style="margin-right:15px;color:#a8b0c8;font-size:13px;"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <a href="newdashboard.html">📊 Dashboard</a>
+            <a href="newstudent.html">👨‍🎓 Students</a>
+            <a href="newattendance.html">📝 Attendance</a>
+            <a href="newreport.html">📄 Reports</a>
+            <a href="newadmin.html" data-role="admin">⚙️ Admin</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <h1>Mark Attendance</h1>
+            <p class="subtitle">Select a subject and date, then mark each student</p>
+
+            <div class="attendance-options">
+                <div>
+                    <label for="attendanceSubject">Subject</label>
+                    <select id="attendanceSubject">
+                        <option>Artificial Intelligence</option>
+                        <option>Machine Learning</option>
+                        <option>DBMS</option>
+                        <option>Computer Networks</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="attendanceDate">Date</label>
+                    <input type="date" id="attendanceDate">
+                </div>
+            </div>
+
+            <div class="section" style="margin-top:0">
+                <table id="attendanceTable">
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Late</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <button class="save-btn" onclick="saveAttendance()">Save Attendance</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
